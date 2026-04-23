@@ -1,0 +1,44 @@
+<svg width="760" height="760" viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="760" rx="64" fill="url(#bg)"/>
+  <circle cx="150" cy="130" r="52" fill="#FFE6B8"/>
+  <circle cx="660" cy="190" r="40" fill="#D7EEFF"/>
+  <circle cx="620" cy="620" r="70" fill="#E6F9E7"/>
+  <rect x="75" y="540" width="610" height="150" rx="40" fill="#FFF8EA"/>
+  <rect x="120" y="576" width="200" height="20" rx="10" fill="#FFD2B0"/>
+  <rect x="120" y="612" width="140" height="20" rx="10" fill="#CFE7FF"/>
+  <rect x="440" y="576" width="180" height="20" rx="10" fill="#CFF4D2"/>
+  <rect x="470" y="612" width="150" height="20" rx="10" fill="#FFD2B0"/>
+
+  <circle cx="250" cy="330" r="85" fill="#FFD8BE"/>
+  <rect x="178" y="410" width="145" height="120" rx="34" fill="#76B3FF"/>
+  <rect x="163" y="430" width="55" height="105" rx="22" fill="#6DA2E6"/>
+  <rect x="280" y="430" width="55" height="105" rx="22" fill="#6DA2E6"/>
+  <path d="M220 320C230 340 270 340 280 320" stroke="#9E5C46" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="226" cy="307" r="8" fill="#5B3B2F"/>
+  <circle cx="274" cy="307" r="8" fill="#5B3B2F"/>
+  <path d="M188 263C207 233 293 233 312 263" stroke="#5A3845" stroke-width="20" stroke-linecap="round"/>
+
+  <circle cx="500" cy="350" r="78" fill="#FFD8BE"/>
+  <rect x="435" y="425" width="130" height="108" rx="32" fill="#8DD7B8"/>
+  <rect x="422" y="444" width="48" height="92" rx="21" fill="#79BF9F"/>
+  <rect x="535" y="444" width="48" height="92" rx="21" fill="#79BF9F"/>
+  <path d="M475 344C485 362 515 362 525 344" stroke="#9E5C46" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="475" cy="330" r="7" fill="#5B3B2F"/>
+  <circle cx="525" cy="330" r="7" fill="#5B3B2F"/>
+  <path d="M444 287C463 260 537 260 556 287" stroke="#5A3845" stroke-width="18" stroke-linecap="round"/>
+
+  <rect x="320" y="450" width="118" height="74" rx="16" fill="#FFF4CC" stroke="#E1C889" stroke-width="4"/>
+  <path d="M334 468H425" stroke="#C9A967" stroke-width="6" stroke-linecap="round"/>
+  <path d="M334 486H425" stroke="#C9A967" stroke-width="6" stroke-linecap="round"/>
+  <path d="M334 504H390" stroke="#C9A967" stroke-width="6" stroke-linecap="round"/>
+
+  <text x="120" y="92" fill="#5D5773" font-family="Baloo 2, Arial" font-size="38" font-weight="700">Learn • Play • Grow</text>
+
+  <defs>
+    <linearGradient id="bg" x1="50" y1="40" x2="710" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEED8"/>
+      <stop offset="0.48" stop-color="#FFE3EF"/>
+      <stop offset="1" stop-color="#DDEEFF"/>
+    </linearGradient>
+  </defs>
+</svg>
