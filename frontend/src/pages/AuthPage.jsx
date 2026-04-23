@@ -28,7 +28,7 @@ export default function AuthPage({ loginFn }) {
     try {
       if (mode === 'login') {
         try {
-          const response = await fetch('http://localhost:8080/api/auth/login', {
+          const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/auth/login`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ email: authData.email, password: authData.password })
@@ -55,7 +55,7 @@ export default function AuthPage({ loginFn }) {
         };
 
         try {
-          const response = await fetch('http://localhost:8080/api/auth/register', {
+          const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/auth/register`, {
               method: 'POST', headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(payload)
           });

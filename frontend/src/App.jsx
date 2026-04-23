@@ -2695,7 +2695,8 @@ export default function App() {
       taskTitle = "Progress Update",
    ) => {
       try {
-         await fetch("http://localhost:3001/api/notify", {
+         const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+         await fetch(`${baseUrl}/api/notify`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ type, childName, taskTitle }),
