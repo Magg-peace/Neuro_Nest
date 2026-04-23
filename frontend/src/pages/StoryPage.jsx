@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AppContext } from '../App.jsx';
 import confetti from 'canvas-confetti';
 
-export default function StoryPage() {
+export default function StoryPage({ completeTask }) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const taskId = location.state?.taskId;
   const { addPoints, addHistory } = useContext(AppContext);
   const [scene, setScene] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -88,8 +90,12 @@ export default function StoryPage() {
     } else {
        // Finish Story
        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-       addPoints(20);
-       addHistory({ type: '📖 Story', topic: activeStory[0].title, points: 20 });
+       if (completeTask && taskId) {
+          completeTask(taskId, 20);
+       } else {
+          addPoints(20);
+          addHistory({ type: '📖 Story', topic: activeStory[0].title, points: 20 });
+       }
        setTimeout(() => navigate('/child-dashboard'), 3000);
     }
   };

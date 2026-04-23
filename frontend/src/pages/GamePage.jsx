@@ -16,8 +16,12 @@ const ICONS_EMOTIONS = [{f: '😊', w: 'Happy'}, {f: '😢', w: 'Sad'}, {f: '�
 const ICONS_DISTRACTIONS = ['🍎', '🚗', '🎈', '🐶', '⚽', '🎯'];
 const ICONS_FRUITS = ['🍎', '🍌', '🍇', '🍉', '🍓'];
 
-export default function GamePage() {
+import { useLocation } from 'react-router-dom';
+
+export default function GamePage({ completeTask }) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const taskId = location.state?.taskId;
   const { addPoints, addHistory } = useContext(AppContext);
   const [gameIndex] = useState(() => Math.floor(Math.random() * GAMES.length));
   const currentGame = GAMES[gameIndex];
@@ -29,16 +33,33 @@ export default function GamePage() {
 
   const initGameData = () => {
      if (currentGame.id === 'pattern') {
-        const seq = [];
-        for (let i = 0; i < 3; i++) seq.push(ICONS_SHAPES[Math.floor(Math.random() * ICONS_SHAPES.length)]);
-        const nextTarget = ICONS_SHAPES[Math.floor(Math.random() * ICONS_SHAPES.length)];
+        const types = ['ABAB', 'AABB', 'ABC'];
+        const type = types[Math.floor(Math.random() * types.length)];
+        const s1 = ICONS_SHAPES[Math.floor(Math.random() * ICONS_SHAPES.length)];
+        const s2 = ICONS_SHAPES.filter(s => s !== s1)[Math.floor(Math.random() * (ICONS_SHAPES.length - 1))];
+        const s3 = ICONS_SHAPES.filter(s => s !== s1 && s !== s2)[Math.floor(Math.random() * (ICONS_SHAPES.length - 2))];
+
+        let seq = [];
+        let nextTarget = '';
+
+        if (type === 'ABAB') {
+           seq = [s1, s2, s1];
+           nextTarget = s2;
+        } else if (type === 'AABB') {
+           seq = [s1, s1, s2];
+           nextTarget = s2;
+        } else {
+           seq = [s1, s2, s3];
+           nextTarget = s1;
+        }
+
         let opts = [nextTarget];
         while (opts.length < 3) {
            const r = ICONS_SHAPES[Math.floor(Math.random() * ICONS_SHAPES.length)];
            if (!opts.includes(r)) opts.push(r);
         }
         opts = opts.sort(() => Math.random() - 0.5);
-        setMessage('What comes next in the pattern?');
+        setMessage(`Pattern detected: ${type}. What comes next?`);
         setGameData({ sequence: seq, target: nextTarget, options: opts });
      } 
      else if (currentGame.id === 'emotion') {
@@ -145,7 +166,12 @@ export default function GamePage() {
           <h2>Level Complete!</h2>
           <p style={{ color: 'var(--success)', fontWeight: 'bold' }}>You earned +15 Points!</p>
           <button className="btn mt-4" onClick={() => {
-              addHistory({ type: '🎮 Game', topic: currentGame.name, points: 15 });
+              if (completeTask && taskId) {
+                 completeTask(taskId, 15);
+              } else {
+                 addHistory({ type: '🎮 Game', topic: currentGame.name, points: 15 });
+                 addPoints(15);
+              }
               navigate('/child-dashboard');
            }} style={{ background: 'var(--primary)', padding: '15px 30px', fontSize: '1.2rem' }}>Back to World</button>
         </div>
