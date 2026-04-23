@@ -22,6 +22,15 @@ public class DashboardController {
     @Autowired
     private ChildRepository childRepository;
 
+    @GetMapping("/test")
+    public ResponseEntity<?> testHealth() {
+        return ResponseEntity.ok(Map.of(
+            "status", "online",
+            "message", "NeuroNest Backend is Live and Perfect! ✅",
+            "timestamp", java.time.LocalDateTime.now()
+        ));
+    }
+
     @GetMapping("/parent/{parentId}")
     public ResponseEntity<?> getParentDashboard(@PathVariable Long parentId) {
         // Return structured data for the dashboard UI
