@@ -22,18 +22,6 @@ It goes beyond content delivery — creating a system where children **learn, pl
 
 ---
 
-## 🖼️ Platform Preview
-
-<p align="center">
-  <img src="docs/images/child_dashboard.png" alt="Child Dashboard Preview" width="90%"/>
-</p>
-
-<p align="center">
-  <img src="docs/images/landing_page.png" alt="Landing Page" width="90%"/>
-</p>
-
----
-
 ## 🚀 Why NeuroNest?
 
 ✨ **Emotion-Aware Learning**
@@ -101,14 +89,12 @@ D --> E[⭐ XP & Rewards]
 2. **Setup Frontend**
    ```bash
    cd frontend
-   # Add VITE_GEMINI_API_KEY to your .env
    npm install
    npm run dev
    ```
 3. **Setup Backend**
    ```bash
    cd neuronest
-   # Configure application.properties with your MySQL/Email credentials
    ./mvnw spring-boot:run
    ```
 4. **Launch Everything**
