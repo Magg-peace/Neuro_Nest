@@ -1,82 +1,139 @@
-# 🧠 NeuroNest — AI-Powered Learning for Every Unique Mind
+# 🧠 NeuroNest
 
-**NeuroNest** is an immersive, emotion-aware, and neurodivergent-friendly learning ecosystem designed specifically for children with **ADHD, Autism, and Dyslexia**. 
+### *Emotion-Aware, Gamified Learning Ecosystem for Every Unique Mind*
 
-By combining cutting-edge **Gemini AI**, multi-sensory animated content, and real-time behavioral insights, NeuroNest transforms learning from a challenge into an adventure.
+<p align="center">
 
----
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Built With](https://img.shields.io/badge/Built%20With-React%20%7C%20Spring%20Boot-blue?style=for-the-badge)
+![UI](https://img.shields.io/badge/UI-Vanilla%20CSS-38B2AC?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Educational-orange?style=for-the-badge)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)
 
-## 🚀 Key Features
-
-### 🎬 Immersive Chapter Hub
-A 10-chapter learning world featuring **Real YouTube Educational Videos**. Each mission is a structured journey:
-- **Watch:** High-quality animated lessons.
-- **Learn:** AI-driven simplified content tailored to mood and condition.
-- **Play:** Gamified quizzes with instant rewards.
-
-### 🎮 Behavioral Game Hub
-5 specialized game mechanics designed for neurodivergent strengths:
-- **Focus Burst (ADHD):** Attention-sharpening challenges.
-- **Emotion Match (Autism):** Building social-emotional literacy.
-- **Pattern Builder:** Enhances logical sequencing and predictability.
-
-### 🛡️ Smart AI Fallback System
-Never get stuck! If the AI connection is unstable, our **Smart Manual Engine** automatically switches to a hand-curated library of 10 diverse topics, ensuring a seamless experience.
-
-### 👨‍👩‍👧 Connected Ecosystem
-- **Child Portal:** Premium "Cartoon World" UI with floating animations and gamified streaks.
-- **Parent Dashboard:** Live activity history, point tracking, and AI-driven behavioral recommendations.
-- **Teacher Dashboard:** Secure live school alerts and task assignment with email notifications.
+</p>
 
 ---
 
-## 🛠️ Technology Stack
+## 🌟 Vision
 
-| Layer | Technology |
-| :--- | :--- |
-| **Frontend** | React, Vite, Lucide Icons, Chart.js, CSS3 Animations |
-| **Main Backend** | Spring Boot (Java), MySQL, JPA/Hibernate |
-| **Microservices** | Node.js, Express (Notification Engine) |
-| **AI Brain** | Google Gemini (2.0 Flash) |
-| **Communication** | Nodemailer (Parent/Teacher Alerts) |
+**NeuroNest** transforms early education for neurodivergent children (ADHD, Autism, Dyslexia) into an **interactive, adaptive, and emotionally intelligent experience**.
+
+It goes beyond content delivery — creating a system where children **learn, play, and grow** through sensory-friendly engagement and deep personalization.
 
 ---
 
-## 🏗️ Getting Started
+## 🖼️ Platform Preview
 
-### 1. Prerequisites
-- Node.js & npm
-- Java 17+ & Maven
-- MySQL Server
+<p align="center">
+  <img src="docs/images/child_dashboard.png" alt="Child Dashboard Preview" width="90%"/>
+</p>
 
-### 2. Environment Setup
-Create a `.env` file in the `frontend/` directory:
-```env
-VITE_GEMINI_API_KEY=your_gemini_key
+<p align="center">
+  <img src="docs/images/landing_page.png" alt="Landing Page" width="90%"/>
+</p>
+
+---
+
+## 🚀 Why NeuroNest?
+
+✨ **Emotion-Aware Learning**
+→ The platform adapts its recommendations and UI based on the child's mood (Happy, Calm, Tired, Anxious).
+
+🎮 **Gamified Learning Loop**
+→ Integrated XP system, target rewards, streaks, and achievement badges to keep engagement levels high.
+
+🧠 **Micro-Learning Design**
+→ Short, focused "Daily Quests" designed for better retention and reduced cognitive load.
+
+🔁 **Connected Ecosystem**
+→ Real-time synchronization between the Child Dashboard, Parent Control Center, and Teacher Command Hub.
+
+---
+
+## 🧩 Learning Flow
+
+```mermaid
+graph TD
+A[🎬 Animated Lesson] --> B[💡 Adaptive Content]
+B --> C[🧠 Interactive Activity]
+C --> D[🎯 Gamified Quiz]
+D --> E[⭐ XP & Rewards]
 ```
 
-### 3. Launch the Nest 🚀
-Run our master launch script from the root:
-```bash
-.\start_application.bat
-```
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology                        |
+| ------------ | --------------------------------- |
+| 🎨 Frontend  | React.js + Lucide Icons           |
+| ⚙️ Backend   | Spring Boot (Java) + Node.js (Notifications) |
+| 🗄️ Database | MySQL + JPA/Hibernate             |
+| 🧠 AI Brain  | Google Gemini 2.0 Flash           |
+| 📧 Comms     | Nodemailer (Email Alerts)         |
 
 ---
 
-## 🎨 Design Philosophy
-NeuroNest uses **Rich Aesthetics** and **Micro-Animations** to reduce cognitive load and enhance engagement:
-- **Cartoon-Themed UI:** Soft gradients, rounded corners, and playful iconography.
-- **Wobble Effects:** Interactive elements that respond to the child.
-- **Theme Support:** Native Dark/Light mode transitions for sensory-sensitive users.
+## 📊 Key Highlights
+
+* 🎯 **Specialized Games**: Focus-sharpening challenges for ADHD and emotion-literacy modules for Autism.
+* 🧠 **Smart AI Fallback**: A hand-curated "Manual Mode" ensures the learning never stops even if the AI is offline.
+* 🌈 **Sensory-Friendly UI**: Premium bubbly aesthetics with micro-animations and theme support.
+* 📈 **Parental Insights**: High-level behavioral analytics and AI-driven recommendations for caregivers.
 
 ---
 
-## 🏆 Hackathon Demo Focus
-- **Real-Time Data Sync:** Watch points move from the Child's Game to the Parent's Dashboard instantly.
-- **AI Adaptability:** Witness the AI changing 10 different topics based on the child's mood.
-- **Reliability:** Built-in offline manual fallback ensures zero downtime during judging.
+## 🔮 Future Scope
+
+* 🤖 **AI Tutor**: Real-time voice interaction with an AI companion.
+* 👨‍👩‍👧 **Multi-Child Support**: Managing multiple siblings from a single parent dashboard.
+* 🌍 **Offline Mode**: Local synchronization for regions with limited internet.
+* 📊 **Predictive Analytics**: Using AI to predict potential learning breakthroughs or burnout.
+
+---
+
+## 📌 Getting Started
+
+1. **Clone the Repo**
+   ```bash
+   git clone https://github.com/Magg-peace/Neuro_Nest
+   ```
+2. **Setup Frontend**
+   ```bash
+   cd frontend
+   # Add VITE_GEMINI_API_KEY to your .env
+   npm install
+   npm run dev
+   ```
+3. **Setup Backend**
+   ```bash
+   cd neuronest
+   # Configure application.properties with your MySQL/Email credentials
+   ./mvnw spring-boot:run
+   ```
+4. **Launch Everything**
+   ```bash
+   .\start_application.bat
+   ```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions that make learning more inclusive! 🚀
+
+---
+
+## 📜 License
+
+Educational / Research Purpose
+
+---
+
+## 💡 Final Thought
+
+> *“Because every mind thinks differently, and every difference is a strength.”*
 
 ---
 
 **Built with 💛 by the NeuroNest Team.**
-*"Because every mind thinks differently, and and every differences is a strength."*
